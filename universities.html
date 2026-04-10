@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Universities | Fortune Educational Consultancy</title>
+    <meta name="description" content="Browse all partner universities across UK, USA, Canada, and Australia. Get expert guidance on choosing the right institution for your study abroad journey.">
+    
+    <!-- OpenGraph Meta Tags for Social Media Preview -->
+    <meta property="og:title" content="All Universities | Fortune Educational Consultancy">
+    <meta property="og:description" content="Browse our network of partner universities across UK, USA, Canada, and Australia.">
+    <meta property="og:image" content="./logo.png">
+    <meta property="og:url" content="https://fortuneeducation.com/universities.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fortune Educational Consultancy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Universities | Fortune Educational Consultancy">
+    <meta name="twitter:description" content="Browse our network of partner universities across UK, USA, Canada, and Australia.">
+    <meta name="twitter:image" content="./logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { background: var(--bg-light); padding: 120px 0 30px; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-dark) !important; }
+        .page-header p { color: var(--text-muted); font-size: 1.1rem; }
+        .full-uni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; padding: 4rem 0; }
+        /* Reuse .uni-card styles from style.css */
+        @media (max-width: 768px) {
+            .page-header { padding: 100px 0 20px; }
+            .page-header h1 { font-size: 1.8rem; }
+            .header-stats { gap: 1rem !important; margin-top: 1.5rem !important; }
+            .header-stats > div { padding: 1rem !important; flex: 1 1 100%; min-width: unset !important; }
+            .full-uni-grid { padding: 2rem 0; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar" id="navbar" style="background: var(--bg-white);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="./logo-transparent.png" alt="Fortune Logo" style="height: 55px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                <div class="logo-text">
+                    <span class="logo-main" style="color: var(--primary-dark)">FORTUNE</span>
+                    <span class="logo-sub" style="color: var(--text-muted)">Educational Consultancy</span>
+                </div>
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link" style="color: var(--text-main)">Home</a>
+                <a href="index.html#destinations" class="nav-link" style="color: var(--text-main)">Countries</a>
+                <a href="#" class="nav-link active" style="color: var(--accent)">Universities</a>
+                <a href="index.html#services" class="nav-link" style="color: var(--text-main)">Services</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/9145934593" class="nav-social" style="color: #25D366"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="#" class="btn btn-primary open-modal-btn" data-modal-type="contact" data-title="Book Your Free Consultation">Free Consultation</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" style="color: var(--primary-dark);">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="fade-in-up">Discover 22 Elite Partnerships</h1>
+            
+            <p class="fade-in-up delay-100">Browse our fully accredited partner universities across the UK.</p>
+            
+            <div class="header-stats fade-in-up delay-200" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
+                <div style="background: var(--bg-white); padding: 1.5rem 2rem; border-radius: 12px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); min-width: 200px;">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem; font-size: 1.8rem;"><i class="ph-fill ph-student" style="color: var(--accent);"></i> 10k+</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; font-weight: 600;">Students Placed</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 1.5rem 2rem; border-radius: 12px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); min-width: 200px;">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem; font-size: 1.8rem;"><i class="ph-fill ph-check-circle" style="color: var(--accent);"></i> 99%</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; font-weight: 600;">Visa Success Rate</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 1.5rem 2rem; border-radius: 12px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); min-width: 200px;">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem; font-size: 1.8rem;"><i class="ph-fill ph-projector-screen" style="color: var(--accent);"></i> 100%</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0; font-weight: 600;">0% Processing Fee</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-light pb-5">
+        <div class="container">
+            <div class="full-uni-grid" id="all-universities-container" style="padding-bottom: 2rem;">
+                <!-- Javascript will inject data.js cards here -->
+            </div>
+            <div class="text-center">
+                <button id="load-more-btn" class="btn btn-outline btn-lg">Load More <i class="ph ph-caret-down"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="./logo-transparent.png" alt="Fortune Logo" style="height: 65px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                    <div class="logo-text">
+                        <span class="logo-main">FORTUNE</span>
+                        <span class="logo-sub">Educational Consultancy</span>
+                    </div>
+                </a>
+                <p>Your trusted partner for study abroad—personalized counselling and end-to-end support.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-ul">
+                    <li><i class="ph-fill ph-phone"></i> +91 4593 4593</li>
+                    <li><i class="ph-fill ph-envelope"></i> fortuneeducationnrt@gmail.com</li>
+                    <li><i class="ph-fill ph-map-pin"></i> Ground Floor, 12-13-4/A, Prakashnagar Area 2, Revenue Ward, No 10, Narasaraopet</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global UI Modal -->
+    <div class="modal-overlay" id="global-modal">
+        <div class="modal-container glass-morphism">
+            <button class="modal-close" id="modal-close-btn"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <h3 id="modal-title">Information</h3>
+            </div>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Content injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Import data and render -->
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('all-universities-container');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            
+            let currentIndex = 0;
+            const itemsPerPage = 8;
+            
+            function renderUniversities() {
+                const nextItems = universitiesDatabase.slice(currentIndex, currentIndex + itemsPerPage);
+                
+                nextItems.forEach((uni, index) => {
+                    const delay = (index % 4) * 100;
+                    const cardHtml = `
+                        <div class="uni-card fade-in-up" style="animation-delay: ${delay}ms; opacity: 1; transform: none;">
+                            <div class="uni-img">
+                                <img src="${uni.image}" alt="${uni.name}">
+                                <span class="rank-badge">${uni.rank}</span>
+                            </div>
+                            <div class="uni-info">
+                                <h4>${uni.name}</h4>
+                                <p><i class="ph-fill ph-map-pin"></i> ${uni.location}</p>
+                                <a href="university-detail.html?id=${uni.id}" class="btn btn-block btn-sm btn-secondary mt-2">View Full Details</a>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += cardHtml;
+                });
+                
+                currentIndex += itemsPerPage;
+                
+                if (currentIndex >= universitiesDatabase.length) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+            
+            // Initial load
+            renderUniversities();
+            
+            // Load more on click
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', renderUniversities);
+            }
+        });
+    </script>
+</body>
+</html>
