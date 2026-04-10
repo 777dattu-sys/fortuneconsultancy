@@ -240,6 +240,174 @@ const universitiesDatabase = [
         intake: "September, January",
         fee: "£14,500 - £17,500 / year",
         psw: "2 Years"
+    },
+    
+    // --- USA ---
+    {
+        id: "asu",
+        name: "Arizona State University",
+        location: "Tempe, USA",
+        rank: "Top 200",
+        description: "Recognized globally as a top-tier research university offering innovative Master's programs and excellent STEM OPT pathways.",
+        image: "./uni3.png",
+        intake: "August, January",
+        fee: "$30,000 - $40,000 / year",
+        psw: "3 Years (STEM OPT)"
+    },
+    {
+        id: "uic",
+        name: "University of Illinois Chicago",
+        location: "Chicago, USA",
+        rank: "Top 300",
+        description: "A major research institution located in the heart of Chicago, offering outstanding career opportunities for Master's students.",
+        image: "./uni4.png",
+        intake: "August, January",
+        fee: "$28,000 - $38,000 / year",
+        psw: "3 Years (STEM OPT)"
+    },
+
+    // --- Canada ---
+    {
+        id: "utoronto",
+        name: "University of Toronto",
+        location: "Toronto, Canada",
+        rank: "Top 25",
+        description: "Canada's top university, providing world-class Master's programs and excellent Post-Graduation Work Permit (PGWP) opportunities.",
+        image: "./uni1.png",
+        intake: "September, January",
+        fee: "CAD 30,000 - 45,000 / year",
+        psw: "Up to 3 Years"
+    },
+    {
+        id: "ubc",
+        name: "University of British Columbia",
+        location: "Vancouver, Canada",
+        rank: "Top 50",
+        description: "A global center for research and teaching, consistently ranked among the top public universities in the world.",
+        image: "./uni2.png",
+        intake: "September, January",
+        fee: "CAD 28,000 - 42,000 / year",
+        psw: "Up to 3 Years"
+    },
+
+    // --- Australia ---
+    {
+        id: "melbourne",
+        name: "University of Melbourne",
+        location: "Melbourne, Australia",
+        rank: "Top 35",
+        description: "Australia's leading university for Master's programs, offering unparalleled academic and professional growth.",
+        image: "./uni3.png",
+        intake: "February, July",
+        fee: "AUD 35,000 - 50,000 / year",
+        psw: "Up to 4 Years"
+    },
+    {
+        id: "sydney",
+        name: "University of Sydney",
+        location: "Sydney, Australia",
+        rank: "Top 40",
+        description: "Consistently ranked among the top universities globally, known for exceptional campus life and employability.",
+        image: "./uni4.png",
+        intake: "February, July",
+        fee: "AUD 38,000 - 52,000 / year",
+        psw: "Up to 4 Years"
+    },
+
+    // --- France ---
+    {
+        id: "sorbonne",
+        name: "Sorbonne University",
+        location: "Paris, France",
+        rank: "Top 100",
+        description: "A world-class, multidisciplinary research university situated in the heart of Paris, France.",
+        image: "./uni1.png",
+        intake: "September",
+        fee: "€3,000 - €5,000 / year",
+        psw: "2 Years"
+    },
+    {
+        id: "ecole-polytechnique",
+        name: "École Polytechnique",
+        location: "Palaiseau, France",
+        rank: "Top 100",
+        description: "The leading French institute blending top-level research, academics, and innovation at the cutting edge of science and technology.",
+        image: "./uni2.png",
+        intake: "September",
+        fee: "€15,000 - €20,000 / year",
+        psw: "2 Years"
+    },
+
+    // --- Ireland ---
+    {
+        id: "tcd",
+        name: "Trinity College Dublin",
+        location: "Dublin, Ireland",
+        rank: "Top 100",
+        description: "Ireland's premier university, offering prestigious Master's degrees in Europe's thriving tech hub.",
+        image: "./uni3.png",
+        intake: "September",
+        fee: "€15,000 - €25,000 / year",
+        psw: "2 Years"
+    },
+    {
+        id: "ucd",
+        name: "University College Dublin",
+        location: "Dublin, Ireland",
+        rank: "Top 200",
+        description: "One of Europe's leading research-intensive universities and Ireland's largest and most diverse institution.",
+        image: "./uni4.png",
+        intake: "September",
+        fee: "€14,000 - €24,000 / year",
+        psw: "2 Years"
+    },
+
+    // --- Germany ---
+    {
+        id: "tum",
+        name: "Technical University of Munich",
+        location: "Munich, Germany",
+        rank: "Top 50",
+        description: "Germany's top-ranked university, offering elite English-taught Master's programs with little to no tuition fees.",
+        image: "./uni1.png",
+        intake: "October, April",
+        fee: "€0 - €3,000 / year",
+        psw: "18 Months"
+    },
+    {
+        id: "lmu",
+        name: "Ludwig Maximilian University",
+        location: "Munich, Germany",
+        rank: "Top 60",
+        description: "A premier European research institution providing exceptional Master's programs across multiple disciplines.",
+        image: "./uni2.png",
+        intake: "October, April",
+        fee: "€0 - €1,000 / year",
+        psw: "18 Months"
+    },
+
+    // --- New Zealand ---
+    {
+        id: "auckland",
+        name: "University of Auckland",
+        location: "Auckland, New Zealand",
+        rank: "Top 100",
+        description: "New Zealand’s highest-ranked university, offering top-tier Master's programs in a safe, vibrant environment.",
+        image: "./uni3.png",
+        intake: "February, July",
+        fee: "NZD 35,000 - 45,000 / year",
+        psw: "Up to 3 Years"
+    },
+    {
+        id: "otago",
+        name: "University of Otago",
+        location: "Dunedin, New Zealand",
+        rank: "Top 250",
+        description: "New Zealand's oldest university, celebrated for its research excellence and top-tier Master's courses.",
+        image: "./uni4.png",
+        intake: "February, July",
+        fee: "NZD 32,000 - 42,000 / year",
+        psw: "Up to 3 Years"
     }
 ];
 

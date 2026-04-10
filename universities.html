@@ -60,7 +60,7 @@
             </div>
 
             <div class="nav-actions">
-                <a href="https://wa.me/9145934593" class="nav-social" style="color: #25D366"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="https://wa.me/9145934593" class="nav-social" style="color: #25D366"><i class="ph ph-whatsapp-logo"></i></a>
                 <a href="#" class="btn btn-primary open-modal-btn" data-modal-type="contact" data-title="Book Your Free Consultation">Free Consultation</a>
                 <button class="mobile-menu-btn" id="mobile-menu-btn" style="color: var(--primary-dark);">
                     <i class="ph ph-list"></i>
@@ -71,9 +71,9 @@
 
     <header class="page-header">
         <div class="container">
-            <h1 class="fade-in-up">Discover 22 Elite Partnerships</h1>
+            <h1 class="fade-in-up">Discover 36+ Elite Partnerships</h1>
             
-            <p class="fade-in-up delay-100">Browse our fully accredited partner universities across the UK.</p>
+            <p class="fade-in-up delay-100">Browse our fully accredited partner universities for Master's programs globally.</p>
             
             <div class="header-stats fade-in-up delay-200" style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;">
                 <div style="background: var(--bg-white); padding: 1.5rem 2rem; border-radius: 12px; box-shadow: var(--shadow-soft); border: 1px solid rgba(0,0,0,0.05); min-width: 200px;">
@@ -92,13 +92,108 @@
         </div>
     </header>
 
-    <section class="section-light pb-5">
+    <section class="section-light pb-5 pt-4">
         <div class="container">
-            <div class="full-uni-grid" id="all-universities-container" style="padding-bottom: 2rem;">
-                <!-- Javascript will inject data.js cards here -->
+            <!-- Mobile Filter Toggle -->
+            <div class="mobile-filter-toggle d-md-none mb-4">
+                <button class="btn btn-outline btn-block" id="mobile-filter-btn" style="width: 100%;"><i class="ph ph-faders"></i> Show Filters</button>
             </div>
-            <div class="text-center">
-                <button id="load-more-btn" class="btn btn-outline btn-lg">Load More <i class="ph ph-caret-down"></i></button>
+
+            <div class="page-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar glass-morphism" id="filter-sidebar">
+                    <div class="filter-header">
+                        <h3><i class="ph-fill ph-funnel"></i> Filters</h3>
+                        <button id="reset-filters" class="btn-link">Reset All</button>
+                    </div>
+                    
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <h4>Search</h4>
+                        <div class="search-input-wrapper">
+                            <i class="ph ph-magnifying-glass"></i>
+                            <input type="text" id="search-uni" placeholder="Search university..." class="filter-select" style="padding-left: 2.5rem;">
+                        </div>
+                    </div>
+
+                    <!-- Country Filter -->
+                    <div class="filter-group">
+                        <h4>Country</h4>
+                        <label><input type="checkbox" name="country" value="uk"> United Kingdom</label>
+                        <label><input type="checkbox" name="country" value="usa"> United States</label>
+                        <label><input type="checkbox" name="country" value="canada"> Canada</label>
+                        <label><input type="checkbox" name="country" value="australia"> Australia</label>
+                        <label><input type="checkbox" name="country" value="france"> France</label>
+                        <label><input type="checkbox" name="country" value="ireland"> Ireland</label>
+                        <label><input type="checkbox" name="country" value="germany"> Germany</label>
+                        <label><input type="checkbox" name="country" value="nz"> New Zealand</label>
+                    </div>
+
+                    <!-- Degree Type Filter -->
+                    <div class="filter-group">
+                        <h4>Degree Type</h4>
+                        <label><input type="checkbox" value="masters" checked> Master's</label>
+                    </div>
+
+                    <!-- Duration Filter -->
+                    <div class="filter-group">
+                        <h4>Duration</h4>
+                        <select class="filter-select">
+                            <option value="">Any Duration</option>
+                            <option value="6m">6 Months</option>
+                            <option value="9m">9 Months</option>
+                            <option value="1y">1 Year</option>
+                            <option value="1.2y">1 Year 2 Months</option>
+                            <option value="1.5y">1 Year 6 Months</option>
+                            <option value="2y">2 Years</option>
+                            <option value="3y">3 Years</option>
+                            <option value="4y">4 Years</option>
+                        </select>
+                    </div>
+
+                    <!-- Intake Filter -->
+                    <div class="filter-group">
+                        <h4>Intake</h4>
+                        <div class="intake-grid">
+                            <label><input type="checkbox" value="jan"> Jan</label><label><input type="checkbox" value="feb"> Feb</label><label><input type="checkbox" value="mar"> Mar</label>
+                            <label><input type="checkbox" value="apr"> Apr</label><label><input type="checkbox" value="may"> May</label><label><input type="checkbox" value="jun"> Jun</label>
+                            <label><input type="checkbox" value="jul"> Jul</label><label><input type="checkbox" value="aug"> Aug</label><label><input type="checkbox" value="sep"> Sep</label>
+                            <label><input type="checkbox" value="oct"> Oct</label><label><input type="checkbox" value="nov"> Nov</label><label><input type="checkbox" value="dec"> Dec</label>
+                        </div>
+                    </div>
+
+                    <!-- IELTS Score Filter -->
+                    <div class="filter-group">
+                        <h4>IELTS Score</h4>
+                        <div class="range-inputs">
+                            <input type="number" placeholder="Min" step="0.5" min="4.0" max="9.0">
+                            <span>to</span>
+                            <input type="number" placeholder="Max" step="0.5" min="4.0" max="9.0">
+                        </div>
+                    </div>
+
+                    <!-- Tuition Fee Filter -->
+                    <div class="filter-group">
+                        <h4>Tuition Fee Range</h4>
+                        <div class="range-inputs">
+                            <input type="number" placeholder="Min" title="Minimum Fee">
+                            <span>to</span>
+                            <input type="number" placeholder="Max" title="Maximum Fee">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block mt-3" id="apply-filters">Apply Filters</button>
+                </aside>
+
+                <!-- Universities Grid Area -->
+                <main class="universities-content">
+                    <div class="full-uni-grid" id="all-universities-container" style="padding-top: 0;">
+                        <!-- Javascript will inject data.js cards here -->
+                    </div>
+                    <div class="text-center mt-4">
+                        <button id="load-more-btn" class="btn btn-outline btn-lg">Load More <i class="ph ph-caret-down"></i></button>
+                    </div>
+                </main>
             </div>
         </div>
     </section>
@@ -147,12 +242,38 @@
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('all-universities-container');
             const loadMoreBtn = document.getElementById('load-more-btn');
+            const filterBtn = document.getElementById('mobile-filter-btn');
+            const filterSidebar = document.getElementById('filter-sidebar');
+            const applyFiltersBtn = document.getElementById('apply-filters');
+            const resetFiltersBtn = document.getElementById('reset-filters');
             
             let currentIndex = 0;
             const itemsPerPage = 8;
+            let filteredData = [...universitiesDatabase]; // Store active filtered data
             
-            function renderUniversities() {
-                const nextItems = universitiesDatabase.slice(currentIndex, currentIndex + itemsPerPage);
+            // Mobile Filter Toggle
+            if(filterBtn) {
+                filterBtn.addEventListener('click', () => {
+                    filterSidebar.classList.toggle('show');
+                    const icon = filterSidebar.classList.contains('show') ? 'ph-x' : 'ph-faders';
+                    const text = filterSidebar.classList.contains('show') ? ' Hide Filters' : ' Show Filters';
+                    filterBtn.innerHTML = `<i class="ph ${icon}"></i> ${text}`;
+                });
+            }
+
+            function renderUniversities(reset = false) {
+                if(reset) {
+                    container.innerHTML = '';
+                    currentIndex = 0;
+                }
+
+                const nextItems = filteredData.slice(currentIndex, currentIndex + itemsPerPage);
+                
+                if (nextItems.length === 0 && currentIndex === 0) {
+                    container.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 3rem 0;"><h3 style="color: var(--text-muted)">No universities found matching your filters.</h3><p>Try adjusting your search criteria.</p></div>';
+                    loadMoreBtn.style.display = 'none';
+                    return;
+                }
                 
                 nextItems.forEach((uni, index) => {
                     const delay = (index % 4) * 100;
@@ -174,17 +295,90 @@
                 
                 currentIndex += itemsPerPage;
                 
-                if (currentIndex >= universitiesDatabase.length) {
+                if (currentIndex >= filteredData.length) {
                     loadMoreBtn.style.display = 'none';
+                } else {
+                    loadMoreBtn.style.display = 'inline-flex';
                 }
             }
+
+            // Apply Filters Action
+            applyFiltersBtn.addEventListener('click', () => {
+                // Get selected countries
+                const selectedCountries = Array.from(document.querySelectorAll('input[name="country"]:checked')).map(cb => cb.value.toLowerCase());
+                const searchTerm = document.getElementById('search-uni').value.toLowerCase().trim();
+                const selectedIntakes = Array.from(document.querySelectorAll('.intake-grid input:checked')).map(cb => cb.value.toLowerCase());
+                
+                filteredData = universitiesDatabase.filter(uni => {
+                    // Check text search
+                    if (searchTerm && !uni.name.toLowerCase().includes(searchTerm)) return false;
+
+                    // Check Country
+                    if (selectedCountries.length > 0) {
+                        const loc = uni.location.toLowerCase();
+                        if (!selectedCountries.some(country => loc.includes(country))) return false;
+                    }
+                    
+                    // Check Intake
+                    if (selectedIntakes.length > 0) {
+                        const uniIntakes = (uni.intake || "").toLowerCase();
+                        if (!selectedIntakes.some(intake => uniIntakes.includes(intake))) return false;
+                    }
+
+                    return true;
+                });
+
+                // Auto-hide sidebar on mobile after applying
+                if(window.innerWidth <= 900 && filterSidebar.classList.contains('show')) {
+                    filterBtn.click();
+                }
+
+                renderUniversities(true);
+            });
+
+            // Reset Filters Action
+            resetFiltersBtn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-sidebar input[type="checkbox"]').forEach(cb => cb.checked = false);
+                document.querySelectorAll('.filter-sidebar input[type="number"]').forEach(input => input.value = '');
+                document.querySelectorAll('.filter-sidebar input[type="text"]').forEach(input => input.value = '');
+                document.querySelectorAll('.filter-sidebar select').forEach(select => select.value = '');
+                
+                filteredData = [...universitiesDatabase];
+                renderUniversities(true);
+            });
             
-            // Initial load
-            renderUniversities();
+            // Initial load - Read URL Parameters for Quick Search integration
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlCountry = urlParams.get('country');
+            const urlIntake = urlParams.get('intake');
+            let autoFilter = false;
+
+            if (urlCountry) {
+                const cb = document.querySelector(`input[name="country"][value="${urlCountry}"]`);
+                if (cb) { cb.checked = true; autoFilter = true; }
+            }
+            if (urlIntake) {
+                const cb = document.querySelector(`.intake-grid input[value="${urlIntake}"]`);
+                if (cb) { cb.checked = true; autoFilter = true; }
+            }
+            
+            if (autoFilter) {
+                applyFiltersBtn.click(); // Automatically trigger filter
+            } else {
+                renderUniversities();
+            }
             
             // Load more on click
             if (loadMoreBtn) {
                 loadMoreBtn.addEventListener('click', renderUniversities);
+            }
+
+            // Trigger search on Enter key
+            const searchInput = document.getElementById('search-uni');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') applyFiltersBtn.click();
+                });
             }
         });
     </script>

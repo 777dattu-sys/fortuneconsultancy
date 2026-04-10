@@ -188,4 +188,20 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorChar: '|'
         });
     }
+
+    // 10. Intake Alert Notification
+    const intakeAlert = document.getElementById('intake-alert');
+    const intakeAlertClose = document.getElementById('intake-alert-close');
+
+    if (intakeAlert && intakeAlertClose) {
+        if (!sessionStorage.getItem('intakeAlertClosed')) {
+            setTimeout(() => {
+                intakeAlert.classList.add('show');
+            }, 3500); // Wait 3.5 seconds before popping up
+        }
+        intakeAlertClose.addEventListener('click', () => {
+            intakeAlert.classList.remove('show');
+            sessionStorage.setItem('intakeAlertClosed', 'true');
+        });
+    }
 });
