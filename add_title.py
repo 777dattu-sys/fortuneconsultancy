@@ -7,19 +7,19 @@ def do_replacements():
             data = file.read()
         
         # 1. Navbar Replacement
-        img_str = '<img src="./logo.png" alt="Fortune Educational Consultancy" style="height: 55px; width: auto; object-fit: contain;">'
+        img_str = '<img src="./logo.png" alt="Fortune Education Consultancy" style="height: 55px; width: auto; object-fit: contain;">'
         new_img_str = '''<img src="./logo-transparent.png" alt="Fortune Logo" style="height: 55px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
                 <div class="logo-text">
                     <span class="logo-main" style="color: var(--primary-dark)">FORTUNE</span>
-                    <span class="logo-sub" style="color: var(--text-muted)">Educational Consultancy</span>
+                    <span class="logo-sub" style="color: var(--text-muted)">Education Consultancy</span>
                 </div>'''
 
         # 2. Footer Replacement
-        img_str_footer = '<img src="./logo.png" alt="Fortune Educational Consultancy" style="height: 65px; width: auto; object-fit: contain;">'
+        img_str_footer = '<img src="./logo.png" alt="Fortune Education Consultancy" style="height: 65px; width: auto; object-fit: contain;">'
         new_img_str_footer = '''<img src="./logo-transparent.png" alt="Fortune Logo" style="height: 65px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
                     <div class="logo-text">
                         <span class="logo-main" style="color: white">FORTUNE</span>
-                        <span class="logo-sub" style="color: #cbd5e1">Educational Consultancy</span>
+                        <span class="logo-sub" style="color: #cbd5e1">Education Consultancy</span>
                     </div>'''
 
         data = data.replace(img_str, new_img_str)
